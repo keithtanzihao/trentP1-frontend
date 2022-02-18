@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "browsify": "^0.0.4",
+    "concurrently": "^7.0.0",
+    "leaflet": "^1.7.1",
+    "nodemon": "^2.0.15"
+  }
 }
