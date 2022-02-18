@@ -1,0 +1,31 @@
+@import url("../base/fonts.css");
+
+#sbar {
+  position: relative;
+  display: inline-block;
+  width: 30vw;
+  height: 100vh;
+  background-color: #767676; 
+}
+
+#sbar > ul {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#sbar > ul > .empty-blk1 {
+  width: 100vw;
+  height: calc(4rem + 40px);
+}
+
+#sbar > ul .sbar-ctn > li {
+  margin: 1rem 1rem 1rem 2rem;
+  color: black; 
+  font-family: MochiyPop;
+  font-size: 0.8rem;
+}
+
+
+
+

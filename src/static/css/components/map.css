@@ -1,0 +1,11 @@
+
+/* Temporary position */
+main {
+  display: flex;
+}
+
+#map {
+  flex-grow: 2;
+  height: 100vh;
+}
+
