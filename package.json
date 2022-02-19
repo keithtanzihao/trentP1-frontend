@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon compile.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.26.0",
     "browsify": "^0.0.4",
     "concurrently": "^7.0.0",
+    "ejs-mate": "^3.0.0",
     "leaflet": "^1.7.1",
     "nodemon": "^2.0.15"
   }
