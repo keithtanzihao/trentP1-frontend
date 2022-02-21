@@ -15,11 +15,11 @@ body#airbnb {
   position: relative;
 }
 
-#airbnb.hidden {
+#airbnb .hidden {
   display: none;
 }
 
-#airbnb.active {
-  overflow: hidden;
+#airbnb .active {
+  display: block;
 }
 

@@ -1,9 +1,44 @@
 @font-face {
-  font-family: 'MochiyPop';
-  src: url('../vendors/fonts/MochiyPopPOne-Regular.ttf');
+  font-family: 'Raleway-Black';
+  src: url("../vendors/fonts/Raleway/Raleway-Black.ttf");
 }
 
 @font-face {
-  font-family: 'CutiveMono';
-  src: url("../vendors/fonts/CutiveMono-Regular.ttf");
+  font-family: 'Raleway-Bold';
+  src: url("../vendors/fonts/Raleway/Raleway-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-ExtraBold';
+  src: url("../vendors/fonts/Raleway/Raleway-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-ExtraLight';
+  src: url("../vendors/fonts/Raleway/Raleway-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: url("../vendors/fonts/Raleway/Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url("../vendors/fonts/Raleway/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url("../vendors/fonts/Raleway/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  src: url("../vendors/fonts/Raleway/Raleway-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: url("../vendors/fonts/Raleway/Raleway-Thin.ttf");
 }

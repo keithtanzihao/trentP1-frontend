@@ -2,10 +2,11 @@
 
 .nav {
   position: relative;
-  z-index: 4;
+  z-index: 314200;
   display: flex;
   justify-content: center;
   padding: 1.8rem 2rem 2rem 2rem;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
   background-color: transparent;
 }
 
@@ -75,7 +76,7 @@
   z-index: 11;
 
   display: block;
-  opacity: 0;
+  opacity: 0.5;
   width: 20px;
   height: 20px;
 

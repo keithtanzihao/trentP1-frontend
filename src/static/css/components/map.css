@@ -1,10 +1,11 @@
 
 /* Temporary position */
 main {
+  position: relative;
   display: flex;
 }
 
 #map {
   flex-grow: 1;
-  height: 50vh;
+  height: calc(100vh - 3.8rem - 40px);
 }
