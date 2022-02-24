@@ -1,4 +1,4 @@
-.modal {
+#modal {
   position: relative;
 }
 
@@ -35,39 +35,43 @@
   font-size: 1rem;
 }
 
-#modal-cb {
+.modal-btn {
   position: relative;
   z-index: 314200;
 
   display: block;
-  opacity: 0.5;
-  width: 25px;
-  height: 25px;
-
-  cursor: pointer;
-}
-
-#modal-box-x {
-  position: absolute;
-  z-index: 314160;
-  left: 18px;
+  border: none;
   width: 30px;
   height: 30px;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+  background-color: transparent;
 }
 
-#modal-box-x:hover {
+.modal-btn:hover {
+  border-radius: 100%;
   background-color: rgba(118, 118, 118, 0.3);
 }
 
-#modal-box-x svg {
-  width: 20px;
-  height: 20px;
+.modal-box-x {
+  position: absolute;
+  z-index: 314160;
+  left: 18px;
+  width: 70px;
+  height: 70px;
 }
 
 .modal-box-head > h1 {
   padding: 1rem 0rem;
   font-family: Raleway-Bold;
   font-size: 2rem;
+}
+
+.modal-box-text {
+  height: 85%;
+  overflow: scroll;
 }
 
 .modal-box b {
