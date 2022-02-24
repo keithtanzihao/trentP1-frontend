@@ -1,3 +1,7 @@
+// import { amenitiesSelector } from "./amenities.js";
+import * as helpers from "./helpers.js";
+import * as info from "./info.js";
+
 // Obtain access_token later
 let access_token = "";
 let attributionText =
@@ -26,43 +30,19 @@ map.setMaxBounds([
 ]);
 basemap.addTo(map);
 
-// Get room_type from dataset and put in object
-function jsonColumnBreakDown(property, data, storeObj, colorArray) {
-  let propertyType = data[property];
-  if (!(data[property] in storeObj)) {
-    storeObj[data[property]] = colorArray.pop();
-  }
-  return storeObj[data[property]];
-}
-
-function truncateText(text, textLimit) {
-  if (textLimit > text.length) return text;
-  while (text.charAt(textLimit) != " ") textLimit++;
-  return text.substring(0, textLimit) + "...";
-}
-
-function checkTruncate(text) {
-  return text.substring(text.length - 3, text.length) === "..." ? true : false;
-}
-
-// Opens modal over map to see more description
-// function moreDescription() {
-
-// }
-
+// Need to refactor in future
 window.addEventListener("DOMContentLoaded", async function () {
   let respListing = await axios.get("../data/listings.json");
-
-  // Need to refactor in future
-
+  
   // Array to store room_type colors / assign color to each room_type for checkRooms object
   let colorArray = ["#F51720", "#FC642D", "#00A699", "#767676"];
   let checkRooms = {};
+  let checkAmenities = {};
 
   for (let t of respListing.data) {
     let lat = parseFloat(t["latitude"]);
     let lng = parseFloat(t["longitude"]);
-    let tColor = jsonColumnBreakDown("room_type", t, checkRooms, colorArray);
+    let tColor = helpers.jsonColumnBreakDown("room_type", t, checkRooms, colorArray);
 
     let options = {
       className: t.id,
@@ -77,75 +57,8 @@ window.addEventListener("DOMContentLoaded", async function () {
       map.fitBounds([event.latlng]);
     });
 
-    circleMarker.addEventListener("click", function () {
-      // Ok shit this isnt good need to refactor later
-      let listInfo = document.querySelector(".listing-focus");
-      listInfo.textContent = "";
-
-      // Name of listing
-      let listHead = document.createElement("h1");
-      listHead.innerText = t["name"];
-      listInfo.appendChild(listHead);
-
-      // Image of Room (only 1 lul)
-      let listImg = document.createElement("img");
-      listImg.className = "listing-img";
-      listImg.src = t["picture_url"];
-      listInfo.appendChild(listImg);
-
-      // Host container
-      let hostCtn = document.createElement("div");
-      hostCtn.className = "listing-hostCtn";
-      let hostHead = document.createElement("h3");
-      hostHead.innerText = `${t["property_type"]} hosted by ${t["host_name"]}`;
-      hostCtn.appendChild(hostHead);
-      let hostImg = document.createElement("img");
-      hostImg.src = t["host_picture_url"];
-      hostCtn.appendChild(hostImg);
-
-      listInfo.appendChild(hostCtn);
-
-      // Description of listing, listing ctn
-      let descCtn = document.createElement("div");
-      descCtn.className = "listing-descCtn";
-      // Add description
-      let listDesc = document.createElement("p");
-      let descText = truncateText(t["description"], 200);
-      listDesc.innerHTML = descText;
-      descCtn.appendChild(listDesc);
-
-      // If description is truncated
-      if (checkTruncate(descText)) {
-        // Button to open more description
-        let listDescBtn = document.createElement("button");
-        listDescBtn.innerText = "See More >";
-        descCtn.appendChild(listDescBtn);
-        listInfo.appendChild(descCtn);
-
-        document
-          .querySelector(".listing-descCtn > button")
-          .addEventListener("click", function (event) {
-            document.querySelector(".modal").className = "modal active";
-            document.querySelector(".modal-box").innerHTML += t["description"];
-          });
-      } else {
-        listInfo.appendChild(descCtn);
-      }
+    circleMarker.addEventListener("click", function() {
+      info.createListingInfo(t);
     });
   }
-  console.log("window loaded");
-  // Allows user to open modal if button click
-  let modalBox = document.querySelector(".modal-cb");
-  console.log(modalBox);
-
-  modalBox.addEventListener("click", (event) => {
-    // if (event.target.checked) {
-    //   console.log("yes");
-    //   document.querySelector("#modal").classList.remove("active");
-    //   document.querySelector("#modal").classList.add("hidden");
-    // }
-    alert("testing here");
-  //   document.querySelector(".modal").classList.remove("active");
-  //   document.querySelector(".modal").classList.add("hidden");
-  });
 });
