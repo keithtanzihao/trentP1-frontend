@@ -1,0 +1,24 @@
+#menu {
+  position: absolute;
+  z-index: 314200;
+  width: 100vw;
+  height: 100vh;
+  background-color: #767676;
+}
+
+.menu-item-ctn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  width: auto;
+  height: 100%;
+  margin: 0rem 4rem;
+}
+
+.menu-item-ctn li {
+  margin: 2rem;
+  font-family: Raleway-Bold;
+  font-size: 2rem;
+}
