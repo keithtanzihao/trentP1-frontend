@@ -80,3 +80,27 @@
   font-size: 1.5rem;
 }
 
+.modal-box-amen {
+  display: flex;
+  align-items: center;
+}
+
+.modal-box-textItem > img {
+  width: 80px;
+  height: 80px;
+}
+
+
+.modal-box-review {
+  margin: 1rem;
+}
+
+.modal-box-review > h4 {
+  font-family: Raleway-Bold;
+  font-size: 1.2rem;
+}
+
+.modal-box-review > p {
+  font-family: Raleway-Regular;
+  font-size: 1rem;
+}
