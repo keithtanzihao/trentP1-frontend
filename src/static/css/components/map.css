@@ -7,5 +7,6 @@ main {
 
 #map {
   flex-grow: 1;
-  height: calc(100vh - 3.8rem - 40px);
+  height: calc(100vh - 2rem - 40px);
 }
+
