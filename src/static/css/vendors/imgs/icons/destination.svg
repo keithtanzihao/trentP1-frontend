@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="34.515404mm"
+   height="45.508316mm"
+   viewBox="0 0 34.515404 45.508316"
+   version="1.1"
+   id="svg16"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   sodipodi:docname="destination.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:d="https://loading.io/stock/">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="65.571386"
+     inkscape:cy="86.647903"
+     inkscape:window-width="1680"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs13" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(37.241856,-130.80936)">
+    <g
+       class="ldl-scale"
+       id="g461"
+       transform="matrix(0.52916667,0,0,0.52916667,-46.442497,127.10519)"><path
+   d="M 82.613,39.6131 C 82.613,20.834 66.7409,5.7619 47.6799,7.0804 31.6125,8.1918 18.5928,21.2014 17.4692,37.268 16.5521,50.3809 23.395,61.98 33.8651,67.9513 c 3.6582,2.0863 6.3946,5.4739 7.5531,9.5227 l 3.2453,11.3421 c 0.6135,2.1443 2.3847,3.8399 4.5955,4.1345 2.7469,0.3661 5.2778,-1.3394 6.0191,-3.9303 L 58.5807,77.4778 C 59.7076,73.5393 62.264,70.1084 65.8431,68.1156 75.8449,62.5469 82.613,51.8732 82.613,39.6131 Z"
+   fill="#849B87"
+   style="fill:#00a699"
+   id="path457" />
+
+<metadata
+   id="metadata459"><d:name
+   style="animation-play-state:paused">marker</d:name>
+
+
+
+<d:tags
+   style="animation-play-state:paused">marker,map,location,pin</d:tags>
+
+
+
+<d:license
+   style="animation-play-state:paused">by</d:license>
+
+
+
+<d:slug
+   style="animation-play-state:paused">xlpfxc</d:slug>
+</metadata>
+</g>
+    <g
+       class="ldl-scale"
+       id="g535"
+       transform="matrix(0.32202667,0,0,0.30341708,-36.094815,133.37145)">
+      <path
+         d="m 31.401,17.333 h 52.5 v 36.333 h -52.5 z"
+         fill="#e15b64"
+         style="fill:#ff5a5f"
+         id="path523" />
+      <g
+         id="g531">
+        <ellipse
+           fill="#abbd81"
+           ry="7.1409998"
+           rx="15.302"
+           cy="85.859001"
+           cx="31.400999"
+           style="fill:#abbd81"
+           id="ellipse525" />
+        <path
+           d="M 31.401,12.333 V 83.5"
+           stroke-miterlimit="10"
+           stroke-linecap="round"
+           stroke-width="4"
+           stroke="#e0e0e0"
+           fill="none"
+           style="stroke:#e0e0e0"
+           id="path527" />
+        <circle
+           fill="#e0e0e0"
+           r="4.9169998"
+           cy="11.917"
+           cx="31.400999"
+           style="fill:#e0e0e0"
+           id="circle529" />
+      </g>
+      <metadata
+         id="metadata533">
+        <d:name
+           style="animation-play-state:paused">flag</d:name>
+        <d:tags
+           style="animation-play-state:paused">flag,goal,destination,target,finish,end</d:tags>
+        <d:license
+           style="animation-play-state:paused">by</d:license>
+        <d:slug
+           style="animation-play-state:paused">o67chj</d:slug>
+      </metadata>
+    </g>
+  </g>
+</svg>

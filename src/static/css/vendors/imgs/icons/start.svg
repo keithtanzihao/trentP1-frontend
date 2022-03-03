@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="34.515404mm"
+   height="45.508316mm"
+   viewBox="0 0 34.515404 45.508316"
+   version="1.1"
+   id="svg16"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   sodipodi:docname="start.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:d="https://loading.io/stock/">
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="65.571386"
+     inkscape:cy="86.647903"
+     inkscape:window-width="1680"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs13" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(37.241856,-130.80936)">
+    <g
+       class="ldl-scale"
+       id="g787"
+       transform="matrix(0.52916667,0,0,0.52916667,-46.351104,127.27662)"><path
+   d="M 82.613,39.6131 C 82.613,20.834 66.7409,5.7619 47.6799,7.0804 31.6125,8.1918 18.5928,21.2014 17.4692,37.268 16.5521,50.3809 23.395,61.98 33.8651,67.9513 c 3.6582,2.0863 6.3946,5.4739 7.5531,9.5227 l 3.2453,11.3421 c 0.6135,2.1443 2.3847,3.8399 4.5955,4.1345 2.7469,0.3661 5.2778,-1.3394 6.0191,-3.9303 L 58.5807,77.4778 C 59.7076,73.5393 62.264,70.1084 65.8431,68.1156 75.8449,62.5469 82.613,51.8732 82.613,39.6131 Z"
+   fill="#849B87"
+   style="fill:#ff5a5f"
+   id="path783" />
+
+<metadata
+   id="metadata785"><d:name
+   style="animation-play-state:paused">marker</d:name>
+
+
+
+<d:tags
+   style="animation-play-state:paused">marker,map,location,pin</d:tags>
+
+
+
+<d:license
+   style="animation-play-state:paused">by</d:license>
+
+
+
+<d:slug
+   style="animation-play-state:paused">xlpfxc</d:slug>
+</metadata>
+</g>
+    <ellipse
+       style="fill:#f2f2f2;fill-rule:evenodd;stroke-width:0.112207"
+       id="path819"
+       cx="-19.892754"
+       cy="148.77808"
+       rx="7.8484001"
+       ry="7.2287889" />
+  </g>
+</svg>
