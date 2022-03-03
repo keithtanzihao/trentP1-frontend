@@ -2,11 +2,17 @@
 <div id="sbar" class="active">
   <ul>
     <div class="sbar-ctn">
-      <li>
+      <li id="sbar-map" class="sbar-listing active">
         <div class="listing-focus">
-          <div class="listing-ctn"></div>
         </div>
       </li>
+
+      <li id="sbar-rou" class="sbar-listing hidden">
+        <div class="search-focus">
+          <%- include("search.ejs") %> 
+        </div>
+      </li>
+
     </div>
   </ul>
 </div>
