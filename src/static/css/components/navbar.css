@@ -2,12 +2,21 @@
 
 .nav {
   position: relative;
-  z-index: 314200;
+  /* affects x button badly */
+  z-index: 314201;
   display: flex;
   justify-content: center;
-  padding: 1.8rem 2rem 2rem 2rem;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
   background-color: transparent;
+}
+
+.nav.nav-hidden {
+  box-shadow: none;
+}
+
+#nav-list.nav-list-hidden {
+  opacity: 0;
 }
 
 #nav-brand {
@@ -24,15 +33,18 @@
   justify-content: center;
   align-items: center;
   margin-left: 0.3rem;
-  font-family: MochiyPop;
-  font-size: 0.8rem;
+  font-family: Raleway-Bold;
+  font-size: 1.5rem;
 }
 
 #nav-list  {
 	position: relative;
+
   width: 100%;
 	display: flex;
+  justify-content: center;
 	align-items: center;
+  flex: 1;
 }
 
 /* .nav-ul {
@@ -64,7 +76,7 @@
 
 #nav-btn {
   position: relative;
-  z-index: 10;
+  left: 10;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -72,17 +84,15 @@
 
 #nav-btn input {
   position: absolute;
-  top: 10px;
-  z-index: 11;
+  top: 5px;
+  left: -5px;
 
   display: block;
-  opacity: 0.5;
-  width: 20px;
-  height: 20px;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
 
   cursor: pointer;
-
-  background-color: orange;
 }
 
 #nav-btn span {
@@ -98,9 +108,11 @@
   
   transform-origin: 4px 0px;
   
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(.89,.05,.05,1.02),
+    background 0.5s cubic-bezier(.89,.05,.05,1.02), opacity 0.55s ease;
 }
+
+
 
 #nav-btn span:first-child {
   transform-origin: 0% 0%;
@@ -114,7 +126,7 @@
 #nav-btn input:checked ~ span {
   opacity: 1;
   transform: rotate(-45deg) translate(-2px, -1.5px);
-  background: #232323;
+  background: black;
 }
 
 
@@ -128,7 +140,7 @@
 }
 
 
-@media screen and (min-width: 591px) {
+/* @media screen and (min-width: 591px) {
 	#nav-btn  {
 		display: none;
 	}
@@ -148,4 +160,4 @@
   display: block;
   height: 28px;
   width: auto;
-}
+} */
