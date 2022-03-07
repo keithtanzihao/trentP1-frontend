@@ -78,7 +78,7 @@ async function main() {
 
         let propertyIcon = L.icon({
           iconUrl: indivListingRoomType.option.icon,
-          iconSize: [20, 20],
+          iconSize: [35, 35],
         });
 
         let circleMarker = L.marker(L.latLng(lat, lng), { icon: propertyIcon });
@@ -123,10 +123,15 @@ async function main() {
       let searchResultCtn = document.querySelector("#search-results-ctn");
       let searchResultHead = document.querySelector("#search-results-head");
 
+      // Reset error messages
+      let errorStartSpan = document.querySelector("#search-start-error");
+      let errorEndSpan = document.querySelector("#search-end-error");
+
       searchStart.addEventListener("input", function () {
         clearTimeout(searchStartTimer);
         searchStartTimer = setTimeout(async function () {
           searchResultCtn.innerHTML = "";
+          errorStartSpan.innerText = "";
           startLayer.clearLayers();
           searchLayer.clearLayers();
           if (polyline !== undefined) {
@@ -143,6 +148,7 @@ async function main() {
         clearTimeout(searchEndTimer);
         searchEndTimer = setTimeout(async function () {
           searchResultCtn.innerHTML = "";
+          errorEndSpan.innerText = "";
           startLayer.clearLayers();
           searchLayer.clearLayers();
           if (polyline !== undefined) {
