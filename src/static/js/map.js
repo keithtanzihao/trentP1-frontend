@@ -151,6 +151,7 @@ async function main() {
           errorEndSpan.innerText = "";
           startLayer.clearLayers();
           searchLayer.clearLayers();
+
           if (polyline !== undefined) {
             map.removeLayer(polyline);
           }

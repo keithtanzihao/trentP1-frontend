@@ -59,8 +59,6 @@ export function createListingInfo(data, reviewResData) {
     // function to show description
 
     const showDesc = function () {
-      console.log(data["description"]);
-
       document.querySelector(".modal-box-head > h1").innerText =
         "About this space";
       document.querySelector("#modal").className = "active";

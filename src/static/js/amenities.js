@@ -1,6 +1,5 @@
 // El No Sabe Pepelaugh
 export function addAmenityIcon(amenity, parentDiv, className, haveLimit) {
-  console.log(parentDiv);
   let amenKey = Object.keys(amenity);
   let limit = 0;
 
