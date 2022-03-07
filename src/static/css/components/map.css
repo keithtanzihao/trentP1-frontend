@@ -1,20 +1,17 @@
 
-/* Temporary position */
-main {
-  position: relative;
-  display: flex;
-}
-
 #map {
+  order: -1;
   flex-grow: 1;
-  height: calc(100vh - 2rem - 40px);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.4);
+  height: calc(50vh - 2rem - 40px);
+  width: 100vw;
 }
 
-.clusterIcon {
+.cluster-icon {
   position: relative;
 }
 
-.clusterImg {
+.cluster-img {
   position: absolute;
   top: -10px;
   left: -10px;
@@ -26,3 +23,24 @@ main {
   font-family: Raleway-Bold;
   font-size: 1rem;
 }
+
+@media screen and (min-width: 769px) {
+  #map {
+    order: 1;
+    height: calc(100vh - 2rem - 40px);
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #map {
+    height: calc(100vh - 124px);
+  }
+}
+
+/* @media screen and (min-width: 1441px) {
+  #map {
+    height: calc(100vh - 208px);
+    /* height: calc(100vh - 72px); */
+  }
+} */
