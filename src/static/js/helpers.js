@@ -1,43 +1,68 @@
+// Truncate listing description
 export function truncateText(text, textLimit) {
-  if (textLimit > text.length) return text;
-  while (text.charAt(textLimit) != " ") textLimit++;
+  if (textLimit > text.length) {
+    return text;
+  }
+  while (text.charAt(textLimit) != " ") {
+    textLimit++;
+  }
   return text.substring(0, textLimit) + "...";
 }
 
+// Check if listing description is has been truncated 
 export function checkTruncate(text) {
   return text.substring(text.length - 3, text.length) === "..." ? true : false;
 }
 
-// Get room_type from dataset and put in object
-export function jsonColumnBreakDown(property, data, storeObj, colorArray) {
-  let propertyType = data[property];
-  if (!(data[property] in storeObj)) {
-    storeObj[data[property]] = colorArray.pop();
+// Get store design colors, icons of each room type in respective object
+export function jsonColumnBreakDown(
+  roomType,
+  listing,
+  storeRoomTypeDesign,
+  roomTypeDesignArray,
+  map
+) {
+  let propertyType = listing[roomType];
+
+  if (!(listing[roomType] in storeRoomTypeDesign)) {
+    let colorObject = roomTypeDesignArray.pop();
+
+    // Create markerClusterGroup for each room_type
+    storeRoomTypeDesign[listing[roomType]] = {
+      propertyType: propertyType,
+      option: colorObject,
+      group: L.layerGroup(),
+      clusterGroup: L.markerClusterGroup({
+        iconCreateFunction: function (cluster) {
+          let clusterCount = cluster.getAllChildMarkers().length;
+          return L.divIcon({
+            html: `
+            <div class="cluster-icon">
+                <div class="cluster-img" style="background-color: ${colorObject.color}">${clusterCount}</div>
+            </div>
+            `,
+          });
+        },
+      }),
+    };
+    storeRoomTypeDesign[listing[roomType]].clusterGroup.addTo(map);
   }
-  return storeObj[data[property]];
+  return storeRoomTypeDesign[listing[roomType]];
 }
 
-export function jsonAmenitiesBreakDown(property, data, storeObj) {
-  let propertyType = data[property].split("\", \"");
+// Store all amenities of each listing into an object
+export function jsonAmenitiesBreakDown(
+  roomType,
+  listing,
+  storeListingAmenities
+) {
+  let propertyType = listing[roomType].split('", "');
 
   for (let l of propertyType) {
     let amenity = l.replace(/[^a-zA-Z ]/g, "");
-    (!(amenity in storeObj)) ? storeObj[amenity] = 1 : storeObj[amenity] += 1;
+    !(amenity in storeListingAmenities)
+      ? (storeListingAmenities[amenity] = 1)
+      : (storeListingAmenities[amenity] += 1);
   }
-  var size = Object.keys(storeObj).length;
-  return storeObj;
+  return storeListingAmenities;
 }
-
-// export function amenitiesSelector(amenity) {
-//   let amenKey = Object.keys(amenity);
-//   let arrayKey = [];
-
-//   for (let key of amenKey) {
-//     if ( !(key.includes("tv") || key.includes("linen")) ) {
-//       arrayKey.push(key);
-//       delete amenity[key];
-//     } 
-//   }
-//   return arrayKey;
-// }
-
