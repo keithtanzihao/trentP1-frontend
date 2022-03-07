@@ -107,7 +107,3 @@ dist
 # Ignore .vscode & .DS_Store & bundle.js
 .DS_Store
 .vscode
-
-# Ignore json data dir / compile.js
-data
-compile.js
