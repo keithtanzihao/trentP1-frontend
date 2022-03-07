@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/keithtanzihao/trentP1-frontend/blob/main/src/static/css/vendors/imgs/readme/readmeImg.png?raw=true)
 
-Access to the live demo [here](https://www.google.com)
+Access to the live demo [here](https://dreamy-clarke-097e90.netlify.app/)
 
 # Project Summary
 
