@@ -37,15 +37,14 @@ export async function getOneMapToken() {
 
 export async function getRoute(startLatLng, endLatLng) {
   let result = await getOneMapToken();
-  console.log(new Date().toLocaleTimeString());
-  console.log(new Date().toLocaleDateString());
+  let transportType = document.querySelector('input[name="transport"]:checked').value;
 
   let options = {
     url: "https://developers.onemap.sg/privateapi/routingsvc/route",
     data: {
       start: startLatLng,
       end: endLatLng,
-      routeType: "drive",
+      routeType: transportType,
       token: result.access_token,
     },
     async: "true",
