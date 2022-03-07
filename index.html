@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheet for leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
+    />
+
+    <link rel="stylesheet" href="./src/static/css/main.css" />
+    <title>Trent Global Project 1</title>
+  </head>
+  <body id="airbnb">
+    
+    <nav class="nav nav-active">
+      <div id="nav-btn">
+        <input id="nav-input" type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="nav-list" class="nav-list-active">
+        <figure id="nav-brand">
+          <img src="./src/static/css/vendors/imgs/icons/brand.png" alt="" />
+          <div id="nav-brand-name"></div>
+        </figure>
+      </div>
+    </nav>
+
+    
+    <div id="menu" class="hidden">
+      <figure id="menu-icon-ctn">
+        <img
+          id="menu-icon-img"
+          src="./src/static/css/vendors/imgs/menu/maps.svg"
+          alt=""
+        />
+      </figure>
+      <ul class="menu-item-ctn">
+        <li id="menu-maps" class="menu-item">Listing Map</li>
+        <li id="menu-route" class="menu-item">Search Routes</li>
+        <li id="menu-stats" class="menu-item">Statistics</li>
+        <li id="menu-about" class="menu-item">About</li>
+      </ul>
+    </div>
+
+    <main>
+      
+      <aside id="sbar" class="active">
+        <div class="sbar-ctn">
+          <section id="sbar-maps" class="sbar-listing active">
+            <div class="listing-focus">
+              <img src="" alt="">
+            </div>
+          </section>
+
+          <section id="sbar-route" class="sbar-listing hidden">
+            <div class="search-focus">
+              <!-- search -->
+              <div id="search">
+                <h1>Search Input</h1>
+
+                <div id="search-ctn">
+                  <form>
+                    <span id="search-start-error"></span>
+                    <label class="search-input-ctn">
+                      <img src="./src/static/css/vendors/imgs/icons/pin.svg" alt="" />
+                      <input
+                        id="search-start"
+                        type="text"
+                        value=""
+                        name="search-location"
+                        placeholder="Select Point On Map"
+                      />
+                    </label>
+
+                    <span id="search-end-error"></span>
+                    <label class="search-input-ctn">
+                      <img src="./src/static/css/vendors/imgs/icons/flag.svg" alt="" />
+                      <input
+                        id="search-end"
+                        type="text"
+                        value=""
+                        name="search-location"
+                        placeholder="Input Destination"
+                      />
+                    </label>
+
+                    <button id="search-btn" type="button">Search Route</button>
+                  </form>
+
+                  <div id="search-results" class="active">
+                    <h3 id="search-results-head"></h3>
+                    <ul id="search-results-ctn"></ul>
+                  </div>
+                </div>
+                <ul id="search-array"></ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </aside>
+
+  
+      <div id="modal" class="hidden">
+        <div class="modal-ctn">
+          <div class="modal-bg"></div>
+          <div class="modal-box">
+            <div class="modal-box-head">
+              <button class="modal-btn">
+                <svg
+                  class="modal-btn-x"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-x"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              <h1></h1>
+            </div>
+            <div class="modal-box-text"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="map"></div>
+      <!-- <div id="checking"></div> -->
+    </main>
+
+
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
+
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.25.0/axios.min.js"
+      integrity="sha512-/Q6t3CASm04EliI1QyIDAA/nDo9R8FQ/BULoUFyN4n/BDdyIxeH7u++Z+eobdmr11gG5D/6nPFyDlnisDwhpYA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="module" src="./src/static/js/polyline.encoded.js"></script>
+    <script type="module" src="./src/static/js/helpers.js"></script>
+    <script type="module" src="./src/static/js/navbar.js"></script>
+    <script type="module" src="./src/static/js/menu.js"></script>
+    <script type="module" src="./src/static/js/modal.js"></script>
+    <script type="module" src="./src/static/js/info.js"></script>
+    <script type="module" src="./src/static/js/search.js"></script>
+    <script type="module" src="./src/static/js/map.js"></script>
+  </body>
+
+  <footer></footer>
+</html>
