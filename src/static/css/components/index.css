@@ -1,12 +1,5 @@
-@import url('navbar.css');
-@import url('menu.css');
+@import url('map.css');
 @import url('sidebar.css');
 @import url('search.css');
 
-@import url('modal.css');
-@import url('map.css');
 
-
-html {
-  overflow: hidden;
-}
