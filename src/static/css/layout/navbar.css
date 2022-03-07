@@ -120,50 +120,7 @@
   transform: rotate(45deg) translate(-2px, -1px);
 }
 
-/* @media screen and (min-width: 1025px) {
-  .nav {
-    padding: 2rem 4rem;
-  }
-
-  #nav-brand img {
-    height: 60px;
-    width: auto;
-  }
-
-  #nav-btn input {
-    top: 12px;
-    left: -7px;
-
-    width: 60px;
-    height: 60px;
-  }
-  
-  #nav-btn span {
-    margin-top: 4px;
-    
-    width: 45px;
-    height: 6px;
-
-    transform-origin: 14px 0px;
-  }
-
-  #nav-btn input:checked ~ span {
-    opacity: 1;
-    transform: rotate(-45deg) translate(-3px, -1.5px);
-    background: black;
-  }
-  
-  #nav-btn input:checked ~ span:nth-last-child(2) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-  
-  #nav-btn input:checked ~ span:nth-last-child(3) {
-    transform: rotate(45deg) translate(-2px, -1px);
-  }
-} */
-
-/* @media screen and (min-width: 1441px) {
+@media screen and (min-width: 2559px) {
   .nav {
     padding: 4rem 8rem;
   }
@@ -205,4 +162,4 @@
   #nav-btn input:checked ~ span:nth-last-child(3) {
     transform: rotate(45deg) translate(-4px, -2px);
   }
-} */
+}

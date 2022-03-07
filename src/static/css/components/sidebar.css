@@ -55,7 +55,7 @@
 .listing-head > h1 {
   margin: 0.5rem;
   text-align: center;
-  word-break: break-all;
+  /* word-break: break-all; */
   font-family: Raleway-Bold;
   font-size: 1.5rem;
 }
@@ -296,8 +296,10 @@
     z-index: 314301;
     background-color: orangered;
   }
+
   .listing-head > h1 {
     margin: 1rem;
+    width: 70%;
     font-size: 2.5rem;
   }
 
@@ -310,7 +312,7 @@
 
   .listing-focus,
   .search-focus {
-    height: calc(100vh - 124px);
+    height: calc(100vh - 72px);
   }
 
   .listing-host-ctn > h3,
@@ -347,9 +349,64 @@
   }
 }
 
-/* @media screen and (min-width: 1441px) {
+@media screen and (min-width: 1441px) {
   .listing-head > h1 {
-    font-size: 4.5rem;
+    font-size: 2.5rem;
+  }
+
+  .listing-focus,
+  .search-focus {
+    height: calc(100vh - 72px);
+  }
+
+  .listing-head,
+  .listing-host-ctn,
+  .listing-desc-ctn,
+  .listing-size,
+  .listing-amenities,
+  .listing-reviews {
+    padding: 2rem 2.5rem;
+    border-bottom: 4px solid rgb(220, 220, 220);
+  }
+
+  .listing-host-ctn > h3,
+  .listing-size > h3,
+  .listing-amenities > h3,
+  .listing-reviews-head > h3 {
+    font-size: 2rem;
+  }
+
+  .listing-host-ctn > img {
+    width: 90px;
+  }
+
+  .listing-desc-ctn > p,
+  .listing-desc-btn,
+  .listing-amenities-btn,
+  .listing-review-btn,
+  .listing-icon-ctn span,
+  .listing-amenities-ctn-item > span,
+  .listing-reviews-ctn {
+    font-size: 1.4rem;
+  }
+
+  .listing-size-icon,
+  .listing-amenities-ctn-item > img,
+  .listing-reviews-head > img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .listing-BarCtn,
+  .listing-BarVal {
+    height: 16px;
+  }
+}
+
+
+@media screen and (min-width: 2559px) {
+  .listing-head > h1 {
+    font-size: 3rem;
   }
 
   .listing-focus,
@@ -364,7 +421,7 @@
   .listing-size,
   .listing-amenities,
   .listing-reviews {
-    padding: 6rem 4rem;
+    padding: 2rem 2.5rem;
     border-bottom: 4px solid rgb(220, 220, 220);
   }
 
@@ -400,4 +457,4 @@
   .listing-BarVal {
     height: 16px;
   }
-} */
+}

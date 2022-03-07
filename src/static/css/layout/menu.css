@@ -60,23 +60,35 @@
   }
 
   .menu-item-ctn li {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 1025px) {
   #menu-icon-img {
-    padding: 9rem 0rem 4.5rem;
+    padding: 7em 0rem 3.5rem;
     width: 40vw;
     height: 20vh;
   }
 
   .menu-item-ctn li {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 
 @media screen and (min-width: 1441px) {
+  #menu-icon-img {
+    padding: 8rem 0rem 4.5rem;
+    width: 40vw;
+    height: 20vh;
+  }
+
+  .menu-item-ctn li {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 2559px) {
   #menu-icon-img {
     padding: 12rem 0rem 6rem;
     width: 40vw;

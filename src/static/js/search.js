@@ -65,7 +65,7 @@ export function displayInstructions(routeInfo, startLayer) {
       createIcon(
         startLayer,
         [parseFloat(latLngArr[0]), parseFloat(latLngArr[1])],
-        "../static/css/vendors/imgs/icons/start.svg",
+        "./src/static/css/vendors/imgs/icons/start.svg",
         startLocation
       );
     }

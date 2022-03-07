@@ -107,7 +107,7 @@ export function createListingInfo(data, reviewResData) {
 
   let sizeMan = document.createElement("img");
   sizeMan.className = "listing-size-icon";
-  sizeMan.src = "../static/css/vendors/imgs/icons/man.svg";
+  sizeMan.src = "./src/static/css/vendors/imgs/icons/man.svg";
   let sizeManNo = document.createElement("span");
   sizeManNo.innerText = data["accommodates"] || 0;
   sizeIconCtn.appendChild(sizeMan);
@@ -115,7 +115,7 @@ export function createListingInfo(data, reviewResData) {
 
   let sizeBed = document.createElement("img");
   sizeBed.className = "listing-size-icon";
-  sizeBed.src = "../static/css/vendors/imgs/icons/bed.svg";
+  sizeBed.src = "./src/static/css/vendors/imgs/icons/bed.svg";
   let sizeBedNo = document.createElement("span");
   sizeBedNo.innerText = data["beds"] || 0;
   sizeIconCtn.appendChild(sizeBed);
@@ -123,7 +123,7 @@ export function createListingInfo(data, reviewResData) {
 
   let sizeBath = document.createElement("img");
   sizeBath.className = "listing-size-icon";
-  sizeBath.src = "../static/css/vendors/imgs/icons/bath.svg";
+  sizeBath.src = "./src/static/css/vendors/imgs/icons/bath.svg";
   let sizeBathNo = document.createElement("span");
   sizeBathNo.innerText = data["bathrooms_text"] || 0;
   sizeIconCtn.appendChild(sizeBath);
@@ -210,10 +210,10 @@ export function createListingInfo(data, reviewResData) {
 
   if (data["number_of_reviews"] === "0") {
     listReviewHead.innerText = "No reviews (yet)";
-    listReviewImg.src = "../static/css/vendors/imgs/icons/starNon.svg";
+    listReviewImg.src = "./src/static/css/vendors/imgs/icons/starNon.svg";
   } else {
     listReviewHead.innerText = `${data["review_scores_rating"]} | ${data["number_of_reviews"]} reviews`;
-    listReviewImg.src = "../static/css/vendors/imgs/icons/starRed.svg";
+    listReviewImg.src = "./src/static/css/vendors/imgs/icons/starRed.svg";
 
     for (let prop of Object.keys(data)) {
       if (

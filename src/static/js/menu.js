@@ -26,7 +26,7 @@ function menuAttachIcon() {
     menuItem.addEventListener("mouseover", function() {
       let menuIconImg = document.querySelector("#menu-icon-img");
       let menuItemType = menuItem.id.split("-");
-      menuIconImg.src = `../static/css/vendors/imgs/menu/${menuItemType[1]}.svg`;
+      menuIconImg.src = `./src/static/css/vendors/imgs/menu/${menuItemType[1]}.svg`;
     })
   }
 }

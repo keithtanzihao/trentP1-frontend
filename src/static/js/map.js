@@ -37,30 +37,30 @@ async function main() {
     searchLayer.addTo(map);
 
     window.addEventListener("DOMContentLoaded", async function () {
-      const listingResponse = await axios.get("../static/data/listings.json");
-      const reviewResponse = await axios.get("../static/data/reviews.json");
+      const listingResponse = await axios.get("./src/static/data/listings.json");
+      const reviewResponse = await axios.get("./src/static/data/reviews.json");
 
       let storeRoomTypeDesign = {};
       let roomTypeDesignArray = [
         {
           color: "#F51720",
-          iconColor: "../static/css/vendors/imgs/icons/hotel.svg",
-          icon: "../static/css/vendors/imgs/icons/hotelIcon.svg",
+          iconColor: "./src/static/css/vendors/imgs/icons/hotel.svg",
+          icon: "./src/static/css/vendors/imgs/icons/hotelIcon.svg",
         },
         {
           color: "#FC642D",
-          iconColor: "../static/css/vendors/imgs/icons/share.svg",
-          icon: "../static/css/vendors/imgs/icons/shareIcon.svg",
+          iconColor: "./src/static/css/vendors/imgs/icons/share.svg",
+          icon: "./src/static/css/vendors/imgs/icons/shareIcon.svg",
         },
         {
           color: "#00A699",
-          iconColor: "../static/css/vendors/imgs/icons/entire.svg",
-          icon: "../static/css/vendors/imgs/icons/entireIcon.svg",
+          iconColor: "./src/static/css/vendors/imgs/icons/entire.svg",
+          icon: "./src/static/css/vendors/imgs/icons/entireIcon.svg",
         },
         {
           color: "#767676",
-          iconColor: "../static/css/vendors/imgs/icons/privateR.svg",
-          icon: "../static/css/vendors/imgs/icons/privateRIcon.svg",
+          iconColor: "./src/static/css/vendors/imgs/icons/privateR.svg",
+          icon: "./src/static/css/vendors/imgs/icons/privateRIcon.svg",
         },
       ];
 
@@ -170,7 +170,7 @@ async function main() {
             let marker = createIcon(
               searchLayer,
               latLng,
-              "../static/css/vendors/imgs/icons/destination.svg",
+              "./src/static/css/vendors/imgs/icons/destination.svg",
               `<h5>${indivLocation.text.primary}</h5>`
             );
 
